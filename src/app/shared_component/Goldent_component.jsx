@@ -1,0 +1,1 @@
+Goldent_component.jsx

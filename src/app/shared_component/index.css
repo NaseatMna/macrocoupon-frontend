@@ -1,5 +1,8 @@
-* body{background-color: red;}
-.navbar-inverse {
-    background-color: rgb(255, 255, 255);
-    border-color: #080808;
+footer p{
+    text-align: center;
+    font-size: 14px;
 }
+p {
+    margin: 0 0 10px;
+}
+footer{ font-size: 30px;}

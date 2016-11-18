@@ -1,65 +1,61 @@
 import React from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
-import RaisedButton from 'material-ui/RaisedButton';
-import AppBar from 'material-ui/AppBar';
-import IconButton from 'material-ui/IconButton';
-import FlatButton from 'material-ui/FlatButton';
-
-
-const menu={
-    menu:{
-        background:'gray',
-        display:'inline-block'
-    },
-    menuitem:{
-        display:'inline-block'
-    },
-    rasibutton:{
-        margin: '10px 0px',
-    }
-}
+import { Row,Col,Grid,Navbar,Nav,NavItem,NavDropdown,MenuItem,FormGroup,FormControl,Button,ControlLabel,Badge} from 'react-bootstrap';
+import style from  './index.css';
 
 export default class Navigation extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = {open: false};
-        this.handleToggle = this.handleToggle.bind(this);}
 
-    //handleToggle = () => this.setState({open: !this.state.open});
-    handleToggle() { this.setState({open: !this.state.open}); }
-    //handleChange = (event, index, value) => this.setState({value});
     render(){
         return(
-            <MuiThemeProvider>
+            <div>
+
+                {/* Start Section MenuBar */}
                 <div>
-                        <Row>{/*
-                            <Col xs={12} md={12} lg={12}>
-                                <AppBar
-                                    title="logo"
-                                    iconClassNameRight="muidocs-icon-navigation-expand-more"
-                                    onTouchTap={this.handleToggle}
-                                >
-                                    <FlatButton label="LogIn" />
-                                    <FlatButton label="SignIn" />
-                                    <FlatButton label="Eng" /><FlatButton label="Kh" />
-                                </AppBar>
-                                <Drawer open={this.state.open}>
-                                    <MenuItem>SignIn</MenuItem>
-                                    <MenuItem>SignUp</MenuItem>
-                                    <MenuItem><a href="#"> Eng</a> || <a href="#"> Kh</a></MenuItem>
-                                </Drawer>
-                            </Col>*/}
-                            <Col xs={12} md={12} lg={12} style={{background:'rgba(62, 62, 83, 0.09)', float:'right'}}>
 
-                            </Col>
-                        </Row>
+                    <Navbar inverse fluid>
+                        <Grid>
+                            <Navbar.Header>
+                                <Navbar.Brand>
+                                    <a href="#" className="hidden-lg hidden-md">Cart</a>
 
-                </div>
-            </MuiThemeProvider>
+                                </Navbar.Brand>
+                                <Navbar.Brand style={{textAlign:'center'}}>
+                                    <a href="#">MacroCoupon</a>
+                                </Navbar.Brand>
+
+
+                                <Navbar.Toggle />
+                            </Navbar.Header>
+
+                            <Navbar.Form pullLeft>
+                                <FormControl type="text" placeholder="Location" className='formlocation' />&nbsp;&nbsp;
+                                <FormGroup>
+
+                                    <FormControl type="text" placeholder="Search" />
+                                </FormGroup>
+
+                                {' '}
+                                <Button type="submit">Search</Button>
+
+
+                            </Navbar.Form>
+
+                            <Navbar.Collapse>
+
+                                <Nav pullRight>
+
+                                    <NavItem eventKey={1} href="#" className="hidden-xs hidden-md">Cart</NavItem>
+
+
+                                    <NavItem eventKey={2} href="#">LogIn</NavItem>
+                                    <NavItem eventKey={3} href="#">SignUp</NavItem>
+                                    <NavItem eventKey={4} href="#">Eng</NavItem>
+                                    <NavItem eventKey={5} href="#">Kh</NavItem>
+                                </Nav>
+                            </Navbar.Collapse>
+                        </Grid>
+                    </Navbar>
+                </div>  {/* End Section MenuBar */}
+            </div>
         );
     }
-
 }

@@ -10,6 +10,7 @@ import Navigation from'./app/shared_component/Navigation';
 import Company from './app/shared_component/Company';
 import Diamon from './app/shared_component/Diamond_component';
 import Main_Menu from './app/shared_component/Main_menu';
+import Login from './app/signin/Signin';
 
 //injectTapEventPlugin();
 
@@ -20,6 +21,7 @@ export default class App extends React.Component {
                 <Navigation/>
                 <Main_Menu/>
                 <Diamon/>
+                <Login/>
                 <Company/>
                 <Footer/>
             </div>

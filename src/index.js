@@ -4,29 +4,44 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import injectTapEventPlugin from 'react-tap-event-plugin';
+//import injectTapEventPlugin from 'material-ui';
 import Footer from './app/shared_component/Footer';
 import Navigation from'./app/shared_component/Navigation';
 import Company from './app/shared_component/Company';
 import Diamon from './app/shared_component/Diamond_component';
 import Main_Menu from './app/shared_component/Main_menu';
 import Login from './app/signin/Signin';
-
+import ReflexboxGrid from './app/ReflexboxGrid';
+import BooksList from './app/containers/book-list';
+import {createStore} from 'redux';
+import { Provider } from 'react-redux';
+import rootReducer from'./app/reducers/index';
+import BookDetail from'./app/containers/book_detail';
+import App from'./app/containers/App';
 //injectTapEventPlugin();
-
-export default class App extends React.Component {
-    render(){
-        return(
-            <div>
-                <Navigation/>
-                <Main_Menu/>
-                <Diamon/>
-                <Login/>
-                <Company/>
-                <Footer/>
-            </div>
-
-        )
-    }
-}
-ReactDOM.render(<App />, document.getElementById('app'));
+let store = createStore(rootReducer)
+//export default class App extends React.Component {
+//    render(){
+//
+//        return(
+//
+//            <div>
+//                <Provider store={store}>
+//                    <App />
+//                </Provider>
+//                {/*<Navigation/>
+//                <Main_Menu/>
+//                <Diamon/>
+//                <Company/>
+//                <Footer/>*/}
+//
+//            </div>
+//
+//        )
+//    }
+//}
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>
+    , document.getElementById('app'));

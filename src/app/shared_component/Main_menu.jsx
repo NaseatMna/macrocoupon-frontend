@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {Nav , NavItem , NavDropdown,MenuItem,Navbar} from 'react-bootstrap';
 
 export default class Main_menu extends React.Component{
@@ -7,7 +8,8 @@ export default class Main_menu extends React.Component{
             <div>
                 <Navbar>
 
-                    <Nav>
+                    <Nav >
+
                         <NavItem eventKey={1} href="#">Coupons</NavItem>
                         <NavItem eventKey={2} href="#">Clearance</NavItem>
                         <NavItem eventKey={2} href="#">Best Deal</NavItem>

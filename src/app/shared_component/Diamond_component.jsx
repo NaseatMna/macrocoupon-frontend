@@ -20,7 +20,7 @@ export default class Diamon extends React.Component{
             <div style={styles.content}>
                 <Grid>
                     <Row style={styles.row}>
-                    <Col sm={6} md={3} lg={3}>
+                    <Col xs={12} sm={6} md={3} lg={3}>
                         <a href="#" >
                         <Thumbnail src="/assets/images/niagara.jpg" alt="242x200">
                             <div style={styles.box}>
@@ -35,7 +35,7 @@ export default class Diamon extends React.Component{
                         </Thumbnail>
                             </a>
                     </Col>
-                    <Col sm={6} md={3} lg={3}>
+                    <Col xs={12} sm={6} md={3} lg={3}>
                         <a href="#" className="box">
                         <Thumbnail src="/assets/images/taza.jpg" alt="242x200">
                             <div style={styles.box}>
@@ -50,7 +50,7 @@ export default class Diamon extends React.Component{
                         </Thumbnail>
                             </a>
                     </Col>
-                    <Col sm={6} md={3} lg={3}>
+                    <Col xs={12} sm={6} md={3} lg={3}>
                         <a href="#" className="box">
                         <Thumbnail src="/assets/images/mixteco.jpg" alt="242x200">
                             <div style={styles.box}>
@@ -64,7 +64,7 @@ export default class Diamon extends React.Component{
                         </Thumbnail>
                             </a>
                     </Col>
-                    <Col sm={6} md={3} lg={3}>
+                    <Col  xs={12} sm={6} md={3} lg={3}>
                         <a href="#" className="box">
                         <Thumbnail src="/assets/images/wicosin.jpg" alt="242x200">
                             <div style={styles.box}>
@@ -82,7 +82,7 @@ export default class Diamon extends React.Component{
                 </Row>
 
                     <Row>
-                        <Col sm={6} md={3} lg={3}>
+                        <Col xs={12} sm={6} md={3} lg={3}>
                             <a href="#" className="box">
                             <Thumbnail src="/assets/images/niagara.jpg" alt="242x200">
                                 <div style={styles.box}>
@@ -98,7 +98,7 @@ export default class Diamon extends React.Component{
                             </Thumbnail>
                                 </a>
                         </Col>
-                        <Col sm={6} md={3} lg={3}>
+                        <Col xs={12} sm={6} md={3} lg={3}>
                             <a href="#" className="box">
                             <Thumbnail src="/assets/images/taza.jpg" alt="242x200">
                                 <div style={styles.box}>
@@ -113,7 +113,7 @@ export default class Diamon extends React.Component{
                             </Thumbnail>
                                 </a>
                         </Col>
-                        <Col sm={6} md={3} lg={3}>
+                        <Col xs={12} sm={6} md={3} lg={3}>
                             <a href="#" className="box">
                             <Thumbnail src="/assets/images/mixteco.jpg" alt="242x200">
                                 <div style={styles.box}>
@@ -127,7 +127,7 @@ export default class Diamon extends React.Component{
                             </Thumbnail>
                                 </a>
                         </Col>
-                        <Col sm={6} md={3} lg={3}>
+                        <Col xs={12} sm={6} md={3} lg={3}>
                             <a href="#" className="box">
                             <Thumbnail src="/assets/images/wicosin.jpg" alt="242x200">
                                 <div style={styles.box}>
@@ -144,7 +144,7 @@ export default class Diamon extends React.Component{
                     </Row>
 
                     <Row>
-                        <Col sm={6} md={3} lg={3}>
+                        <Col xs={12} sm={6} md={3} lg={3}>
                             <a href="#" className="box">
                                 <Thumbnail src="/assets/images/niagara.jpg" alt="242x200">
                                     <div style={styles.box}>
@@ -160,7 +160,7 @@ export default class Diamon extends React.Component{
                                 </Thumbnail>
                             </a>
                         </Col>
-                        <Col sm={6} md={3} lg={3}>
+                        <Col xs={12} sm={6} md={3} lg={3}>
                             <a href="#" className="box">
                                 <Thumbnail src="/assets/images/taza.jpg" alt="242x200">
                                     <div style={styles.box}>
@@ -175,7 +175,7 @@ export default class Diamon extends React.Component{
                                 </Thumbnail>
                             </a>
                         </Col>
-                        <Col sm={6} md={3} lg={3}>
+                        <Col xs={12} sm={6} md={3} lg={3}>
                             <a href="#" className="box">
                                 <Thumbnail src="/assets/images/mixteco.jpg" alt="242x200">
                                     <div style={styles.box}>
@@ -189,7 +189,7 @@ export default class Diamon extends React.Component{
                                 </Thumbnail>
                             </a>
                         </Col>
-                        <Col sm={6} md={3} lg={3}>
+                        <Col xs={12} sm={6} md={3} lg={3}>
                             <a href="#" className="box">
                                 <Thumbnail src="/assets/images/wicosin.jpg" alt="242x200">
                                     <div style={styles.box}>

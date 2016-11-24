@@ -12,8 +12,8 @@ export default class Footer extends React.Component {
 
         return(
                     <div>
-                        <footer className={styles.footer}>
-                           <p>© Macrocoupon 2016</p>
+                        <footer>
+                           <p>© 2016 Macrocoupon, Inc. All Rights Reserved.</p>
                        </footer>
                     </div>
         );

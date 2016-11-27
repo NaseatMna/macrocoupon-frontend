@@ -10,6 +10,7 @@ import Navigation from'./app/shared_component/Navigation';
 import Company from './app/shared_component/Company';
 import Diamon from './app/shared_component/Diamond_component';
 import Main_Menu from './app/shared_component/Main_menu';
+import SidBarMenu from './app/shared_component/sidbar_menu';
 
 injectTapEventPlugin();
 
@@ -17,7 +18,9 @@ export default class App extends React.Component {
     render(){
         return(
             <div>
+
                 <Navigation/>
+                <SidBarMenu/>
                 <Main_Menu/>
                 <Diamon/>
                 <Company/>

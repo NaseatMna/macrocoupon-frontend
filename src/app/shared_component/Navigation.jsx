@@ -1,9 +1,15 @@
 import React from 'react';
 import { Row,Col,Grid,Navbar,Nav,NavItem,NavDropdown,MenuItem,FormGroup,FormControl,Button,ControlLabel,Badge} from 'react-bootstrap';
 import style from  './index.css';
+<<<<<<< HEAD
 import Drawer from 'material-ui/Drawer';
 import RaisedButton from 'material-ui/RaisedButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+=======
+
+
+
+>>>>>>> c8eff4a5e51e30b6e4434642e01e12711bea1cbe
 export default class Navigation extends React.Component{
     constructor(props) {
         super(props);

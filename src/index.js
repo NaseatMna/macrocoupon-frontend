@@ -18,8 +18,9 @@ import { Provider } from 'react-redux';
 import rootReducer from'./app/reducers/index';
 import BookDetail from'./app/containers/book_detail';
 import App from'./app/containers/App';
-//injectTapEventPlugin();
-let store = createStore(rootReducer)
+import SidBarMenu from './app/shared_component/sidbar_menu';
+injectTapEventPlugin();
+//let store = createStore(rootReducer)
 //export default class App extends React.Component {
 //    render(){
 //
@@ -40,8 +41,29 @@ let store = createStore(rootReducer)
 //        )
 //    }
 //}
-ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>
-    , document.getElementById('app'));
+//ReactDOM.render(
+//    <Provider store={store}>
+//        <App />
+//    </Provider>
+//    , document.getElementById('app'));
+//=======
+injectTapEventPlugin();
+
+export default class App extends React.Component {
+    render(){
+        return(
+            <div>
+
+                <Navigation/>
+                <SidBarMenu/>
+                <Main_Menu/>
+                <Diamon/>
+                <Company/>
+                <Footer/>
+            </div>
+
+        )
+    }
+}
+ReactDOM.render(<App />, document.getElementById('app'));
+

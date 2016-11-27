@@ -1,66 +1,94 @@
 import React from 'react';
 import { Row,Col,Grid,Navbar,Nav,NavItem,NavDropdown,MenuItem,FormGroup,FormControl,Button,ControlLabel,Badge} from 'react-bootstrap';
-import style from  './index.css';
-<<<<<<< HEAD
-import Drawer from 'material-ui/Drawer';
-import RaisedButton from 'material-ui/RaisedButton';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-=======
 
+const styles={
+    style:{
+        color:'rgba(0, 0, 0, 0.870588)',
+        backgroundColor: 'rgb(255, 255, 255)',
+        transition: 'transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms',
+        boxSizing: 'border-box',
+        boxShadow:'rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px',
+        borderRadius:'0px',
+        height: '100%',
+        width: 256,
+        position: 'fixed',
+        zIndex: '1300',
+        left: '0px',
+        top: '0px',
+        transform: 'translate(0px, 0px)',
+        overflow: 'auto'
+    },
+    icon:{
+        color: 'white',
+        position: 'relative',
+        top: '14px',
+        display: 'inline-block',
+        fontFamily: 'Glyphicons Halflings',
+        fontStyle: 'normal',
+        fontweight: '400px',
+        paddingright: '6px',
+        marginRight:'5px'
+    },
+    a:{
+        color:'white'
+    }
+}
 
-
->>>>>>> c8eff4a5e51e30b6e4434642e01e12711bea1cbe
 export default class Navigation extends React.Component{
     constructor(props) {
         super(props);
-        this.state = {open: false};
-        this.handleToggle = this.handleToggle.bind(this);
+        this.state = {showMenuBar: false}
+        this.handleToggleClick = this.handleToggleClick.bind(this);
     }
-    handleToggle() { this.setState({open: !this.state.open}); }
+    handleToggleClick() {
+        this.setState(prevState => ({
+            showMenuBar: !prevState.showMenuBar
+        }));
+    }
+
     render(){
+        function MenuLeftBar(props) {
+            if (!props.warn) {
+                return null;
+            }
+            return (
+                <div>
+                    <Nav style={styles.style} >
+                        <span className="glyphicon glyphicon-remove"></span>
+                        <NavItem eventKey={1} href="#">NavItem 1 content</NavItem>
+                        <NavItem eventKey={2} title="#">NavItem 2 content</NavItem>
+                        <NavItem eventKey={3} href="#">NavItem 3 content</NavItem>
+                        <NavItem eventKey={4} title="#">NavItem 4 content</NavItem>
+                    </Nav>
+                </div>
+            );}
         return(
-            <MuiThemeProvider>
             <div>
-
                 {/* Start Section MenuBar */}
-                <div onTouchTap={this.handleToggle}>
-
+                <div>
+                    <MenuLeftBar warn={this.state.showMenuBar}/>
                     <Navbar inverse fluid >
                         <Grid>
-                            <Navbar.Header >
+                            <Navbar.Header ><span style={styles.icon} className="glyphicon glyphicon-th-list" onClick={this.handleToggleClick}></span>
                                 <Navbar.Brand>
                                     <a href="#" className="hidden-lg hidden-md">Cart(s)</a>
-
                                 </Navbar.Brand>
                                 <Navbar.Brand style={{textAlign:'center'}}>
-                                    <a href="#"  onTouchTap={this.handleToggle}>MacroCoupon</a>
+                                    <a href="#" style={styles.a} >MacroCoupon</a>
                                 </Navbar.Brand>
-
-
-
                                 <Navbar.Toggle />
                             </Navbar.Header>
-
                             <Navbar.Form pullLeft>
                                 <FormControl type="text" placeholder="Location" className='formlocation' />&nbsp;&nbsp;
                                 <FormGroup>
-
                                     <FormControl type="text" placeholder="Search" />
                                 </FormGroup>
-
                                 {' '}
                                 <Button type="submit">Search</Button>
-
-
                             </Navbar.Form>
-
                             <Navbar.Collapse>
-
                                 <Nav pullRight>
-
                                     <NavItem eventKey={1} href="#" className="hidden-xs hidden-sm">Cart(s)</NavItem>
-
-
                                     <NavItem eventKey={2} href="#" className="hidden-xs hidden-sm">LogIn</NavItem>
                                     <NavItem eventKey={3} href="#" className="hidden-xs hidden-sm">SignUp</NavItem>
                                     <NavItem eventKey={4} href="#" className="hidden-xs hidden-sm">Eng</NavItem>
@@ -70,13 +98,8 @@ export default class Navigation extends React.Component{
                         </Grid>
                     </Navbar>
                 </div>  {/* End Section MenuBar */}
-                <Drawer open={this.state.open}>
-                    <NavItem>Menu Item</NavItem>
-                    <NavItem>Menu Item 2</NavItem>
-                </Drawer>
             </div>
 
-                </MuiThemeProvider>
         );
     }
 }

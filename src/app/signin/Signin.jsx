@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import { Button,FormGroup,Form,Col,ControlLabel,FormControl,Checkbox ,Grid,Row } from 'react-bootstrap';
 
 export default class Login extends React.Component{
     constructor(props){
@@ -51,9 +51,59 @@ export default class Login extends React.Component{
     render(){
         return(
             <div>
-                <h3>LogIn</h3>
-                <div id="status"></div>
-                <Button bsStyle="primary" onClick={this.connectFacebook}>Login with Facebook</Button>
+                <Grid>
+                <Row>
+                    <Col sm={12} md={6}>
+                        <h3>LogIn</h3>
+                        <Form horizontal>
+                            <FormGroup controlId="formHorizontalEmail">
+                                <Col componentClass={ControlLabel} sm={2}>
+                                    Email
+                                </Col>
+                                <Col sm={10}>
+                                    <FormControl type="email" placeholder="Email" />
+                                </Col>
+                            </FormGroup>
+
+                            <FormGroup controlId="formHorizontalPassword">
+                                <Col componentClass={ControlLabel} sm={2}>
+                                    Password
+                                </Col>
+                                <Col sm={10}>
+                                    <FormControl type="password" placeholder="Password" />
+                                </Col>
+                            </FormGroup>
+
+                            <FormGroup>
+                                <Col smOffset={2} sm={10}>
+                                    <Checkbox>Remember me</Checkbox>
+                                </Col>
+                            </FormGroup>
+
+                            <FormGroup>
+                                <Col smOffset={2} sm={10}>
+                                    <Button type="submit">
+                                        Sign in
+                                    </Button>
+                                </Col>
+                            </FormGroup>
+                        </Form>
+                    </Col>
+                    <Col sm={12} md={6}>
+                        <span></span>
+                        <a className="btn btn-block btn-social btn-twitter">
+                            <span className="fa fa-twitter"></span> Sign in with Twitter
+                        </a>
+                    </Col>
+                    <Col sm={12} md={6}>
+                        <span></span>
+                        <a className="btn btn-block btn-social btn-facebook">
+                            <span className="fa fa-facebook"></span> Sign in with Twitter
+                        </a>
+                    </Col>
+                </Row>
+               </Grid>
+                {/*<Button bsStyle="primary" onClick={this.connectFacebook}>Login with Facebook</Button>*/}
             </div>
         );
     }

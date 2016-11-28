@@ -31,6 +31,9 @@ const styles={
     },
     a:{
         color:'white'
+    },
+    h3:{
+        textAlign:'center'
     }
 }
 
@@ -52,13 +55,14 @@ export default class Navigation extends React.Component{
                 return null;
             }
             return (
-                <div>
+
+                <div >
                     <Nav style={styles.style} >
-                        <span className="glyphicon glyphicon-remove"></span>
-                        <NavItem eventKey={1} href="#">NavItem 1 content</NavItem>
-                        <NavItem eventKey={2} title="#">NavItem 2 content</NavItem>
-                        <NavItem eventKey={3} href="#">NavItem 3 content</NavItem>
-                        <NavItem eventKey={4} title="#">NavItem 4 content</NavItem>
+                        <h3 style={styles.h3}>Macrocoupon</h3>
+                        <NavItem eventKey={1} href="#" >Products</NavItem>
+                        <NavItem eventKey={2} title="#">Services</NavItem>
+                        <NavItem eventKey={3} href="#">User Signin</NavItem>
+                        <NavItem eventKey={4} title="#">User SignUp</NavItem>
                     </Nav>
                 </div>
             );}
@@ -67,9 +71,9 @@ export default class Navigation extends React.Component{
                 {/* Start Section MenuBar */}
                 <div>
                     <MenuLeftBar warn={this.state.showMenuBar}/>
-                    <Navbar inverse fluid >
+                    <Navbar inverse fluid onClick={this.handleToggleClick}>
                         <Grid>
-                            <Navbar.Header ><span style={styles.icon} className="glyphicon glyphicon-th-list" onClick={this.handleToggleClick}></span>
+                            <Navbar.Header ><span style={styles.icon} className="glyphicon glyphicon-th-list hidden-xs "></span>
                                 <Navbar.Brand>
                                     <a href="#" className="hidden-lg hidden-md">Cart(s)</a>
                                 </Navbar.Brand>
@@ -89,7 +93,7 @@ export default class Navigation extends React.Component{
                             <Navbar.Collapse>
                                 <Nav pullRight>
                                     <NavItem eventKey={1} href="#" className="hidden-xs hidden-sm">Cart(s)</NavItem>
-                                    <NavItem eventKey={2} href="#" className="hidden-xs hidden-sm">LogIn</NavItem>
+                                    <NavItem eventKey={2} href="#" className="hidden-xs hidden-sm">SignIn</NavItem>
                                     <NavItem eventKey={3} href="#" className="hidden-xs hidden-sm">SignUp</NavItem>
                                     <NavItem eventKey={4} href="#" className="hidden-xs hidden-sm">Eng</NavItem>
                                     <NavItem eventKey={5} href="#" className="hidden-xs hidden-sm">Kh</NavItem>

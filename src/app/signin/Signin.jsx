@@ -1,6 +1,13 @@
 import React from 'react';
 import { Button,FormGroup,Form,Col,ControlLabel,FormControl,Checkbox ,Grid,Row } from 'react-bootstrap';
 
+import Header from './../shared_component/Header';
+const styles={
+    style:{
+        marginTop:'36px' ,
+        background: 'rgb(251, 251, 251)'
+    }
+}
 export default class Login extends React.Component{
     constructor(props){
         super(props);
@@ -51,7 +58,8 @@ export default class Login extends React.Component{
     render(){
         return(
             <div>
-                <Grid>
+                <Header/>
+                <Grid style={styles.style}>
                 <Row>
                     <Col sm={12} md={6}>
                         <h3>LogIn</h3>
@@ -92,7 +100,7 @@ export default class Login extends React.Component{
                     <Col sm={12} md={6}>
                         <span></span>
                         <a className="btn btn-block btn-social btn-twitter">
-                            <span className="fa fa-twitter"></span> Sign in with Twitter
+                           <i class="fa fa-facebook">Sign in with Twitter</i>
                         </a>
                     </Col>
                     <Col sm={12} md={6}>

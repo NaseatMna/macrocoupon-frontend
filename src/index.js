@@ -16,12 +16,14 @@ export default class App extends React.Component {
     render(){
         return(
             <div>
-                <Login/>
+                {/* <Login/> */}
+
                 <Navigation/>
                 <Main_Menu/>
                 <Diamon/>
                 <Company/>
                 <Footer/>
+
             </div>
 
         )

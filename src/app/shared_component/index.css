@@ -1,8 +1,6 @@
-footer p{
-    text-align: center;
-    font-size: 14px;
+body{
+    background: gray;
 }
-p {
-    margin: 0 0 10px;
+.hello{
+    color:red;
 }
-footer{ font-size: 30px;}

@@ -43,14 +43,14 @@ module.exports = {
                 loader: 'file?name=assets/[name].[hash].[ext]'
             },
             {
-                test: /(\.scss|\.css)$/,
-                loader: 'style!css?modules',
-                include: /flexboxgrid/,
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader")
             },
+            // Optionally extract less files
+            // or any other compile-to-css language
             {
-                test: /(\.scss|\.css)$/,
-                loader: ExtractTextPlugin.extract('style-loader','css-loader'),
-                exclude: /flexboxgrid/
+                test: /\.less$/,
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
             },
             {
                 test: /.*\.(gif|png|jpe?g|svg)$/i,

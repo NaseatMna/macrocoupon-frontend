@@ -85,3 +85,30 @@ footer p{
     color:white;
     font-size: 20px;
 }
+/* Responsive Resolutions Screens */
+
+@media (max-width: 768px){
+    .navbar-nav {
+        background: rgba(0, 0, 0, 0.529412);
+        position: relative;
+        display: -webkit-box;
+        color:white;
+    }
+    nav.navbar.navbar-default {
+        margin-top: 16%;
+    }
+    .navbar-default .navbar-nav>li>a{
+        color:white;
+    }
+    .form-group {
+        float: left;
+    }
+
+
+}
+
+
+
+
+
+

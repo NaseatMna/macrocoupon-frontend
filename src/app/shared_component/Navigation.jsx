@@ -1,6 +1,5 @@
 import React from 'react';
-import { Row,Col,Grid,Navbar,Nav,NavItem,NavDropdown,MenuItem,FormGroup,FormControl,Button,ControlLabel,Badge} from 'react-bootstrap';
-
+import { Row,Col,Grid,Navbar,Nav,InputGroup,DropdownButton,NavItem,NavDropdown,MenuItem,FormGroup,FormControl,Button,ControlLabel,Badge} from 'react-bootstrap';
 const styles={
     style:{
         color:'rgba(0, 0, 0, 0.870588)',
@@ -19,14 +18,15 @@ const styles={
         overflow: 'auto'
     },
     icon:{
+        fontSize:'20px',
         color: 'white',
         position: 'relative',
-        top: '14px',
+        top: '11px',
         display: 'inline-block',
         fontFamily: 'Glyphicons Halflings',
         fontStyle: 'normal',
-        fontweight: '400px',
-        paddingright: '6px',
+        fontWeight: '400px',
+        paddingRight: '6px',
         marginRight:'5px'
     },
     a:{
@@ -34,10 +34,17 @@ const styles={
     },
     h3:{
         textAlign:'center'
-    }
+    },
+    //location:{
+    //    width:'',
+    //},
+    //search:{
+    //    width:'',
+    //}
 }
 
 export default class Navigation extends React.Component{
+
     constructor(props) {
         super(props);
         this.state = {showMenuBar: false}
@@ -71,28 +78,35 @@ export default class Navigation extends React.Component{
                 {/* Start Section MenuBar */}
                 <div>
                     <MenuLeftBar warn={this.state.showMenuBar}/>
-                    <Navbar inverse fluid onClick={this.handleToggleClick}>
+                    <Navbar inverse fluid fixedTop onClick={this.handleToggleClick}>
                         <Grid>
-                            <Navbar.Header ><span style={styles.icon} className="glyphicon glyphicon-th-list hidden-xs "></span>
+                            <Navbar.Header ><span style={styles.icon} className="glyphicon glyphicon-align-justify hidden-xs "></span>
+
                                 <Navbar.Brand>
-                                    <a href="#" className="hidden-lg hidden-md">Cart(s)</a>
-                                </Navbar.Brand>
-                                <Navbar.Brand style={{textAlign:'center'}}>
-                                    <a href="#" style={styles.a} >MacroCoupon</a>
+                                    <a href="#" style={styles.a} >MacroCoupon</a>  &nbsp;
+                                    <a href="#" className="hidden-lg hidden-md hidden-sm" style={styles.a}>Cart[0]</a>
+
+
                                 </Navbar.Brand>
                                 <Navbar.Toggle />
                             </Navbar.Header>
                             <Navbar.Form pullLeft>
-                                <FormControl type="text" placeholder="Location" className='formlocation' />&nbsp;&nbsp;
                                 <FormGroup>
-                                    <FormControl type="text" placeholder="Search" />
+                                    <InputGroup>
+                                        <InputGroup.Addon><img src="/assets/images/location.png"/> </InputGroup.Addon>
+                                        <FormControl type="text" placeholder="Location" style={styles.location}/>
+                                    </InputGroup>
+                                </FormGroup>
+                                &nbsp;
+                                <FormGroup>
+                                    <FormControl type="text" placeholder="Search" style={styles.search}/>
                                 </FormGroup>
                                 {' '}
                                 <Button type="submit">Search</Button>
                             </Navbar.Form>
                             <Navbar.Collapse>
                                 <Nav pullRight>
-                                    <NavItem eventKey={1} href="#" className="hidden-xs hidden-sm">Cart(s)</NavItem>
+                                    <NavItem eventKey={1} href="#" className="hidden-xs hidden-sm">Cart[0]</NavItem>
                                     <NavItem eventKey={2} href="#" className="hidden-xs hidden-sm">SignIn</NavItem>
                                     <NavItem eventKey={3} href="#" className="hidden-xs hidden-sm">SignUp</NavItem>
                                     <NavItem eventKey={4} href="#" className="hidden-xs hidden-sm">Eng</NavItem>
@@ -100,6 +114,8 @@ export default class Navigation extends React.Component{
                                 </Nav>
                             </Navbar.Collapse>
                         </Grid>
+                    </Navbar>
+                    <Navbar>
                     </Navbar>
                 </div>  {/* End Section MenuBar */}
             </div>

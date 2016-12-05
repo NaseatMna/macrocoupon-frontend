@@ -17,6 +17,7 @@ export default class Main_menu extends React.Component{
                         <NavItem eventKey={2} href="#">Clearance</NavItem>
                         <NavItem eventKey={2} href="#">Best Deal</NavItem>
 
+
                     </Nav>
                 </Navbar>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button,FormGroup,Form,Col,ControlLabel,FormControl,Checkbox ,Grid,Row } from 'react-bootstrap';
 
-import Header from './../shared_component/Header';
+import Header from './../shared_component/Navigation/Header';
 const styles={
     style:{
         marginTop:'36px' ,

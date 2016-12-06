@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import {NavItem,Nav,Button,Pager} from 'react-bootstrap';
-import './index.css'
+import './../index.css'
 
 
 export default class SidBarMenu extends React.Component {

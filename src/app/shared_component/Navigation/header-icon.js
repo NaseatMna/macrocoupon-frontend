@@ -54,26 +54,30 @@ export  default class IconHeader extends React.Component{
         <MuiThemeProvider>
             <div>
                 <Drawer  docked={false}
-                         width={200}
+                         width={300}
                          open={this.state.open}
                          onRequestChange={(open) => this.setState({open})} >
-                    <h3><img src="/assets/images/logo.png"/> </h3>
+                    <a href="#">
+                        <span className="glyphicon glyphicon-remove" onTouchTap={this.handleToggle}></span>
+                    </a>
+                    <img className="logo" src="/assets/images/logo.png"/>
                     <Accordion>
-                        <Panel header=">Product" eventKey="1">
+                        <Panel header=">&nbsp;Product" eventKey="1" >
                             <Accordion>
                                 <Panel header="Car" eventKey="1">
-                                    <a href="#">Test</a>
+
                                 </Panel>
                             </Accordion>
                         </Panel>
                     </Accordion>
                     <Accordion>
-                        <Panel header=">Service" eventKey="1">
-                            <a href="#">Test</a>
+                        <Panel header=">&nbsp;Service" eventKey="1">
+
                         </Panel>
                     </Accordion>
                     <MenuItem>SignIn</MenuItem>
                     <MenuItem>SignUp</MenuItem>
+
                 </Drawer>
                 <Navbar.Header >
                     <span style={styles.icon} className="glyphicon glyphicon-align-justify hidden-xs " onTouchTap={this.handleToggle}></span>

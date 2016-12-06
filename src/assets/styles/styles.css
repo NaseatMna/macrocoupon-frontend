@@ -61,7 +61,7 @@ a:hover {
     /*outline-offset: -2px;*/
     text-decoration: none;
 }
-.h4, h4 {
+.list-group h4 {
     border-top: 3px solid #dbdbdb;
     background: rgba(235, 235, 235, 0.64);
     font-size: 18px;
@@ -74,6 +74,18 @@ a:hover {
 }
 .thumbnail:hover {
     background: rgba(172, 172, 172, 0.2);
+}
+.panel-group {
+    margin-bottom: 5px;
+}
+.panel-body {
+    margin-top: 3px;
+    padding:0px;
+}
+img.scrolltotop {
+    float: right;
+    margin-right: 25px;
+    width: 80px;
 }
 /********* Section Footer *******/
 footer{
@@ -95,7 +107,7 @@ footer p{
         color:white;
     }
     nav.navbar.navbar-default {
-        margin-top: 16%;
+        margin-top: 54px;
     }
     .navbar-default .navbar-nav>li>a{
         color:white;

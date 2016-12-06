@@ -1,5 +1,8 @@
 import React from 'react';
-import { Row,Col,Grid,Navbar,Nav,InputGroup,DropdownButton,NavItem,NavDropdown,MenuItem,FormGroup,FormControl,Button,ControlLabel,Badge} from 'react-bootstrap';
+import { Accordion,Panel,Row,Col,Grid,Navbar,Nav,InputGroup,DropdownButton,NavItem,NavDropdown,MenuItem,FormGroup,FormControl,Button,ControlLabel,Badge} from 'react-bootstrap';
+import Header from'./Header';
+import IconHeader from'./header-icon';
+
 const styles={
     style:{
         color:'rgba(0, 0, 0, 0.870588)',
@@ -34,62 +37,23 @@ const styles={
     },
     h3:{
         textAlign:'center'
-    },
-    //location:{
-    //    width:'',
-    //},
-    //search:{
-    //    width:'',
-    //}
+    }
 }
-
 export default class Navigation extends React.Component{
 
     constructor(props) {
         super(props);
-        this.state = {showMenuBar: false}
-        this.handleToggleClick = this.handleToggleClick.bind(this);
-    }
-    handleToggleClick() {
-        this.setState(prevState => ({
-            showMenuBar: !prevState.showMenuBar
-        }));
-    }
 
+        }
     render(){
-        function MenuLeftBar(props) {
-            if (!props.warn) {
-                return null;
-            }
-            return (
 
-                <div >
-                    <Nav style={styles.style} >
-                        <h3 style={styles.h3}>Macrocoupon</h3>
-                        <NavItem eventKey={1} href="#" >Products</NavItem>
-                        <NavItem eventKey={2} title="#">Services</NavItem>
-                        <NavItem eventKey={3} href="#">User Signin</NavItem>
-                        <NavItem eventKey={4} title="#">User SignUp</NavItem>
-                    </Nav>
-                </div>
-            );}
         return(
             <div>
-                {/* Start Section MenuBar */}
+                {/* Start Section MenuBar onClick={this.handleToggleClick} */}
                 <div>
-                    <MenuLeftBar warn={this.state.showMenuBar}/>
-                    <Navbar inverse fluid fixedTop onClick={this.handleToggleClick}>
+                    <Navbar inverse fluid fixedTop >
                         <Grid>
-                            <Navbar.Header ><span style={styles.icon} className="glyphicon glyphicon-align-justify hidden-xs "></span>
-
-                                <Navbar.Brand>
-                                    <a href="#" style={styles.a} >MacroCoupon</a>  &nbsp;
-                                    <a href="#" className="hidden-lg hidden-md hidden-sm" style={styles.a}>Cart[0]</a>
-
-
-                                </Navbar.Brand>
-                                <Navbar.Toggle />
-                            </Navbar.Header>
+                            <IconHeader/>
                             <Navbar.Form pullLeft>
                                 <FormGroup>
                                     <InputGroup>
@@ -116,6 +80,7 @@ export default class Navigation extends React.Component{
                         </Grid>
                     </Navbar>
                     <Navbar>
+
                     </Navbar>
                 </div>  {/* End Section MenuBar */}
             </div>

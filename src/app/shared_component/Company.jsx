@@ -1,6 +1,6 @@
 import React from 'react';
 import {ListGroup,ListGroupItem,Col,Row,Grid} from 'react-bootstrap';
-
+import Scroll from 'react-scroll';
 const styles={
     content:{
         //backgroundImage:'url(/assets/images/4.jpg)',
@@ -20,11 +20,19 @@ const styles={
 }
 
 }
+var Link       = Scroll.Link;
+var Element    = Scroll.Element;
+var Events     = Scroll.Events;
+var scroll     = Scroll.animateScroll;
+var scrollSpy  = Scroll.scrollSpy;
 export default class Company extends React.Component{
-
+    scrollToTop() {
+        scroll.scrollToTop();
+    }
     render(){
         return(
             <div style={styles.content}>
+                <a onClick={this.scrollToTop}><img className="scrolltotop" src="/assets/images/scroll.png"/></a>
                 <Grid>
                 <Row>
                     <Col  sm={12} md={4} lg={6}>

@@ -73,7 +73,14 @@ const styles={
 }
 
 }
+
 export default class Diamon extends React.Component{
+    constructor(props){
+        super(props);
+    }
+    scrollToTop() {
+        scroll.scrollToTop();
+    }
 
     render(){
         return(

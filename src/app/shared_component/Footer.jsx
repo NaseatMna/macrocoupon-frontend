@@ -11,6 +11,7 @@ export default class Footer extends React.Component {
 
         return(
                     <div>
+
                         <footer>
                            <p>© 2016 Macrocoupon, Inc. All Rights Reserved.</p>
                        </footer>
